@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Documentation</title>
+
+
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background-color:#eaeaea;
+}
+
+/* Layout */
+.container{
+    display:flex;
+}
+
+/* Sidebar */
+.sidebar{
+    width:220px;
+    background:#f5f5f7;
+    padding:20px;
+    height:100vh;
+    position:fixed;
+    border-right:1px solid #d2d2d7;
+}
+
+.sidebar a{
+    display:block;
+    margin:10px 0;
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+}
+
+.sidebar a:hover{
+    color:black;
+}
+
+/* Main content */
+.content{
+    margin-left:240px;
+    padding:40px;
+    max-width:900px;
+}
+
+section{
+    margin-bottom:50px;
+}
+
+/* Code block */
+.code-container{
+    position:relative;
+}
+
+pre{
+    background:#f4f4f4;
+    padding:15px;
+    border-radius:6px;
+    overflow-x:auto;
+}
+
+.copy-btn{
+    position:absolute;
+    top:8px;
+    right:8px;
+    padding:5px 8px;
+    font-size:12px;
+    border:none;
+    border-radius:4px;
+    background:#ddd;
+    cursor:pointer;
+}
+
+.copy-btn:hover{
+    background:#ccc;
+}
+
+footer{
+    margin-left:240px;
+    padding:20px;
+    background:#f5f5f7;
+    border-top:1px solid #d2d2d7;
+    text-align:center;
+    font-size:14px;
+    color:#6e6e73;
+}
+
+.back-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 8px 16px;
+    background-color: #f2f2f2;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background-color: #e6e6e6;
+}
+</style>
+</head>
+
+<body>
+
+    <a href="index.html" class="back-button">← Back to Home</a>
+
+<div class="container">
+
+<!-- Sidebar -->
+<div class="sidebar">
+<h3>HTML Docs</h3>
+<a href="#intro">Introduction</a>
+<a href="#structure">Structure</a>
+<a href="#text">Text</a>
+<a href="#links">Links</a>
+<a href="#images">Images</a>
+<a href="#lists">Lists</a>
+<a href="#forms">Forms</a>
+<a href="#semantic">Semantic</a>
+<a href="#tables">Tables</a>
+</div>
+
+<!-- Content -->
+<div class="content">
+
+<h1>HTML Documentation</h1>
+
+<section id="intro">
+<h2>1. Introduction</h2>
+<p>HTML is the structure of every website.</p>
+</section>
+
+<section id="structure">
+<h2>2. Basic Structure</h2>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+</section>
+
+<section id="text">
+<h2>3. Text Elements</h2>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+&lt;h1&gt;Heading&lt;/h1&gt;
+&lt;p&gt;Paragraph&lt;/p&gt;
+&lt;strong&gt;Bold&lt;/strong&gt;
+&lt;em&gt;Italic&lt;/em&gt;
+</pre>
+</div>
+
+</section>
+
+<section id="links">
+<h2>4. Links</h2>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+&lt;a href="https://example.com"&gt;Visit&lt;/a&gt;
+</pre>
+</div>
+
+</section>
+
+<section id="images">
+<h2>5. Images</h2>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+&lt;img src="image.jpg" alt="description"&gt;
+</pre>
+</div>
+
+</section>
+
+<section id="lists">
+<h2>6. Lists</h2>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+&lt;ul&gt;
+  &lt;li&gt;Item&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+
+</section>
+
+<section id="forms">
+<h2>7. Forms</h2>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+&lt;form&gt;
+  &lt;input type="text"&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+</div>
+
+</section>
+
+<section id="semantic">
+<h2>8. Semantic HTML</h2>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+&lt;header&gt;&lt;/header&gt;
+&lt;nav&gt;&lt;/nav&gt;
+&lt;main&gt;&lt;/main&gt;
+&lt;section&gt;&lt;/section&gt;
+&lt;footer&gt;&lt;/footer&gt;
+</pre>
+</div>
+
+</section>
+
+<section id="tables">
+<h2>9. Tables</h2>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+</div>
+
+</section>
+
+</div>
+</div>
+
+
+<!--FOOTER OF MY PAGE OF HTML-->
+<footer>
+© 2026 Jason Antay — HTML Documentation
+</footer>
+
+
+<!--JAVASCRIPT CODES FOR MY PAGE-->
+<script>
+function copyCode(button){
+    let code = button.nextElementSibling.innerText;
+    navigator.clipboard.writeText(code);
+    button.innerText = "Copied!";
+    setTimeout(() => button.innerText = "Copy", 1500);
+}
+</script>
+
+</body>
+</html>

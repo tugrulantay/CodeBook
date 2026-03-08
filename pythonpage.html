@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Documentation for Beginners</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background-color:#eaeaea;
+}
+
+/* Layout */
+.container{
+    display:flex;
+}
+
+/* Sidebar */
+.sidebar{
+    width:220px;
+    background:#f5f5f7;
+    padding:20px;
+    height:100vh;
+    position:fixed;
+    border-right:1px solid #d2d2d7;
+}
+
+.sidebar a{
+    display:block;
+    margin:10px 0;
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+}
+
+.sidebar a:hover{
+    color:black;
+}
+
+/* Main content */
+.content{
+    margin-left:240px;
+    padding:40px;
+    max-width:900px;
+}
+
+section{
+    margin-bottom:50px;
+}
+
+/* Code block */
+.code-container{
+    position:relative;
+}
+
+pre{
+    background:#f4f4f4;
+    padding:15px;
+    border-radius:6px;
+    overflow-x:auto;
+}
+
+.copy-btn{
+    position:absolute;
+    top:8px;
+    right:8px;
+    padding:5px 8px;
+    font-size:12px;
+    border:none;
+    border-radius:4px;
+    background:#ddd;
+    cursor:pointer;
+}
+
+.copy-btn:hover{
+    background:#ccc;
+}
+
+footer{
+    margin-left:240px;
+    padding:20px;
+    background:#f5f5f7;
+    border-top:1px solid #d2d2d7;
+    text-align:center;
+    font-size:14px;
+    color:#6e6e73;
+}
+
+.back-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 8px 16px;
+    background-color: #f2f2f2;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background-color: #e6e6e6;
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="back-button">← Back to Home</a>
+
+<div class="container">
+
+<div class="sidebar">
+<h3>Python Basics</h3>
+<a href="#intro">What is Python?</a>
+<a href="#variables">Variables</a>
+<a href="#functions">Functions</a>
+<a href="#conditions">If Statements</a>
+<a href="#loops">Loops</a>
+<a href="#lists">Lists</a>
+<a href="#input">User Input</a>
+<a href="#modules">Modules</a>
+<a href="#example">Simple Example</a>
+</div>
+
+<div class="content">
+
+<h1>Python Documentation </h1>
+
+<section id="intro">
+<h2>1. What is Python?</h2>
+<p>Python is a programming language that is easy to read and simple to learn.  
+It is used for websites, data science, automation, artificial intelligence, and more.</p>
+</section>
+
+<section id="variables">
+<h2>2. Variables</h2>
+<p>Variables store information. Think of them like labeled boxes that hold data.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+# Creating variables
+name = "Jason"
+age = 25
+
+print(name)
+</pre>
+</div>
+</section>
+
+<section id="functions">
+<h2>3. Functions</h2>
+<p>Functions are blocks of code that run when you call them.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+def say_hello():
+    print("Hello World!")
+
+say_hello()  # Runs the function
+</pre>
+</div>
+</section>
+
+<section id="conditions">
+<h2>4. If Statements</h2>
+<p>If statements allow your program to make decisions.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+age = 18
+
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are under 18")
+</pre>
+</div>
+</section>
+
+<section id="loops">
+<h2>5. Loops</h2>
+<p>Loops repeat code multiple times.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+for i in range(5):
+    print("Number:", i)
+</pre>
+</div>
+</section>
+
+<section id="lists">
+<h2>6. Lists</h2>
+<p>Lists store multiple values in one variable.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+fruits = ["Apple", "Banana", "Orange"]
+
+print(fruits[0])  # Apple
+</pre>
+</div>
+</section>
+
+<section id="input">
+<h2>7. User Input</h2>
+<p>You can ask the user to type something into the program.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+name = input("What is your name? ")
+print("Hello", name)
+</pre>
+</div>
+</section>
+
+<section id="modules">
+<h2>8. Modules</h2>
+<p>Modules are extra tools you can import into your program.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+import math
+
+print(math.sqrt(16))  # 4.0
+</pre>
+</div>
+</section>
+
+<section id="example">
+<h2>9. Simple Example</h2>
+<p>This example checks if a number is even or odd.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+number = 10
+
+if number % 2 == 0:
+    print("Even number")
+else:
+    print("Odd number")
+</pre>
+</div>
+</section>
+
+</div>
+</div>
+
+<footer>
+© 2026 Jason Antay — Python for Beginners
+</footer>
+
+<script>
+function copyCode(button){
+    let code = button.nextElementSibling.innerText;
+    navigator.clipboard.writeText(code);
+    button.innerText = "Copied!";
+    setTimeout(() => button.innerText = "Copy", 1500);
+}
+</script>
+
+</body>
+</html>

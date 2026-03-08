@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeNest</title>
+    
+   <style>
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    border-radius: 6px;
+    transition: 0.2s ease;
+}
+
+a:hover {
+    color: blue;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    object-fit: cover;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+}
+
+#body{
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    text-align: center;
+    width: 300px;
+}
+
+#searchInput {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+mark {
+    background-color: yellow;
+    color: black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* LEFT SIDE EDITOR BOX */
+.editor-box {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.08);
+    width: 220px;
+    text-align: center;
+}
+
+.editor-box img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.editor-box h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.editor-box p {
+    font-size: 14px;
+    color: #6e6e73;
+}
+
+.editor-box a {
+    background-color: #007acc;
+    color: white;
+    margin-top: 10px;
+}
+
+.editor-box a:hover {
+    background-color: #005f9e;
+    color: white;
+}
+
+/*footer css */
+footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #f5f5f7;
+    text-align: center;
+    font-size: 14px;
+    color: #6e6e73;
+    margin-top: 40px;
+    border-top: 1px solid #d2d2d7;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+</style>
+
+</head>
+<body>
+    
+    <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchFunction()">
+
+    <!-- LEFT SIDE EDITOR BOX -->
+    <div class="editor-box">
+
+        <!-- VS CODE LOGO -->
+        <img src="vscode.jpg" alt="VS Code Logo">
+
+        <h3>Start Coding</h3>
+        <p>You need a code editor to begin.</p>
+        <a href="https://code.visualstudio.com/download" target="_blank">
+            ⬇ Download VS Code
+        </a>
+    </div>
+
+    <!--MY WEB LOGO IMAGE-->
+    <img src="Code.jpg" alt="Web logo">
+        
+    <div id="body">
+        <h1>CodeNest</h1>
+       
+       <ul>
+            <li><a href="htmlpage.html">🌐 HTML</a></li>
+            <li><a href="csspage.html">🎨 CSS</a></li>
+            <li><a href="javascript.html">⚡ JavaScript</a></li>
+            <li><a href="pythonpage.html">🐍 Python</a></li>
+       </ul>
+    </div>
+
+<footer>
+    <div class="footer-content">
+        <p>© 2026 Jason Antay</p>
+        <p>Built with HTML, CSS & JavaScript</p>
+    </div>
+</footer>
+
+<script src="index.js"></script>
+
+</body>
+</html>

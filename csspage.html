@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Documentation for Beginners</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background-color:#eaeaea;
+}
+
+/* Layout */
+.container{
+    display:flex;
+}
+
+/* Sidebar */
+.sidebar{
+    width:220px;
+    background:#f5f5f7;
+    padding:20px;
+    height:100vh;
+    position:fixed;
+    border-right:1px solid #d2d2d7;
+}
+
+.sidebar a{
+    display:block;
+    margin:10px 0;
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+}
+
+.sidebar a:hover{
+    color:black;
+}
+
+/* Main content */
+.content{
+    margin-left:240px;
+    padding:40px;
+    max-width:900px;
+}
+
+section{
+    margin-bottom:50px;
+}
+
+/* Code block */
+.code-container{
+    position:relative;
+}
+
+pre{
+    background:#f4f4f4;
+    padding:15px;
+    border-radius:6px;
+    overflow-x:auto;
+}
+
+.copy-btn{
+    position:absolute;
+    top:8px;
+    right:8px;
+    padding:5px 8px;
+    font-size:12px;
+    border:none;
+    border-radius:4px;
+    background:#ddd;
+    cursor:pointer;
+}
+
+.copy-btn:hover{
+    background:#ccc;
+}
+
+footer{
+    margin-left:240px;
+    padding:20px;
+    background:#f5f5f7;
+    border-top:1px solid #d2d2d7;
+    text-align:center;
+    font-size:14px;
+    color:#6e6e73;
+}
+
+.back-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 8px 16px;
+    background-color: #f2f2f2;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background-color: #e6e6e6;
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="back-button">← Back to Home</a>
+
+<div class="container">
+
+<div class="sidebar">
+<h3>CSS Basics</h3>
+<a href="#intro">What is CSS?</a>
+<a href="#selectors">How CSS Selects</a>
+<a href="#boxmodel">Box Model</a>
+<a href="#flexbox">Flexbox</a>
+<a href="#grid">Grid</a>
+<a href="#position">Position</a>
+<a href="#typography">Text Styling</a>
+<a href="#animations">Hover & Animations</a>
+<a href="#responsive">Responsive Design</a>
+</div>
+
+<div class="content">
+
+<h1>CSS Documentation </h1>
+
+<section id="intro">
+<h2>1. What is CSS?</h2>
+<p>CSS stands for Cascading Style Sheets. It is used to make websites look beautiful. 
+If HTML builds the structure of a house, CSS paints the walls and arranges the furniture.</p>
+</section>
+
+<section id="selectors">
+<h2>2. How CSS Selects Elements</h2>
+<p>CSS needs to know WHAT to style. We use selectors to choose elements.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+/* This styles all paragraphs */
+p {
+  color: blue;
+}
+
+/* This styles elements with class="box" */
+.box {
+  background-color: lightgray;
+}
+
+/* This styles element with id="main" */
+#main {
+  font-size: 20px;
+}
+</pre>
+</div>
+</section>
+
+<section id="boxmodel">
+<h2>3. The Box Model (Very Important)</h2>
+<p>Every element on a webpage is like a box. 
+That box has content, padding (inside space), border, and margin (outside space).</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+.box {
+  width: 200px;       /* size of content */
+  padding: 20px;      /* space inside */
+  border: 2px solid black;
+  margin: 10px;       /* space outside */
+}
+</pre>
+</div>
+</section>
+
+<section id="flexbox">
+<h2>4. Flexbox (Easy Alignment)</h2>
+<p>Flexbox helps you align items in a row or column. 
+It makes centering things very easy.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+.container {
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically */
+}
+</pre>
+</div>
+</section>
+
+<section id="grid">
+<h2>5. CSS Grid (Rows and Columns)</h2>
+<p>Grid helps you create layouts with rows and columns, like a table but more powerful.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+</pre>
+</div>
+</section>
+
+<section id="position">
+<h2>6. Positioning Elements</h2>
+<p>Position controls where elements appear on the screen.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+.box {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+</pre>
+</div>
+</section>
+
+<section id="typography">
+<h2>7. Styling Text</h2>
+<p>CSS allows you to change fonts, size, weight, and spacing of text.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+p {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+</pre>
+</div>
+</section>
+
+<section id="animations">
+<h2>8. Hover Effects & Animations</h2>
+<p>You can make buttons move or change color when users hover over them.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: gray;
+  transform: scale(1.1);
+}
+</pre>
+</div>
+</section>
+
+<section id="responsive">
+<h2>9. Responsive Design</h2>
+<p>Responsive design means your website works on phones, tablets, and computers.</p>
+
+<div class="code-container">
+<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<pre>
+@media (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+</pre>
+</div>
+</section>
+
+</div>
+</div>
+
+<footer>
+© 2026 Jason Antay — CSS for Beginners
+</footer>
+
+<script>
+function copyCode(button){
+    let code = button.nextElementSibling.innerText;
+    navigator.clipboard.writeText(code);
+    button.innerText = "Copied!";
+    setTimeout(() => button.innerText = "Copy", 1500);
+}
+</script>
+
+</body>
+</html>
